@@ -1,0 +1,133 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>CPSC481_DigiDine</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\AB_Crisp-Pils_Small.png" />
+    <None Remove="img\Apple Pie.jpeg" />
+    <None Remove="img\Apple Pie.jpg" />
+    <None Remove="img\Basque Cheesecake.jpg" />
+    <None Remove="img\Chicken Alfredo.jpg" />
+    <None Remove="img\Chicken Nuggies.jpg" />
+    <None Remove="img\Chicken Sandwich.jpg" />
+    <None Remove="img\Chicken Tacos.png" />
+    <None Remove="img\Chicken Tendies.jpg" />
+    <None Remove="img\Chicken Wings.jpg" />
+    <None Remove="img\filter.png" />
+    <None Remove="img\Fork.jpg" />
+    <None Remove="img\Golden Fried Chicken.png" />
+    <None Remove="img\Hearty Chicken Noodle Soup.jpg" />
+    <None Remove="img\IPad_10.2‑inch.png" />
+    <None Remove="img\Merlot + Syrah - Cherries &amp;  Rainbows.png" />
+    <None Remove="img\Not-a-Big Mac.png" />
+    <None Remove="img\Patron Cadillac Margarita.png" />
+    <None Remove="img\Ribeye + Truffle Butter.png" />
+    <None Remove="img\Salad.jpg" />
+    <None Remove="img\Southwest Caesar Chicken Wrap.jpg" />
+    <None Remove="img\Spinach Stuffed Chicken Breast.jpg" />
+    <None Remove="img\Straw.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\Apple Pie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Basque Cheesecake.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\filter.png" />
+    <Resource Include="img\Fork.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Salad.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Southwest Caesar Chicken Wrap.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\AB_Crisp-Pils_Small.png" />
+    <Resource Include="img\Chicken Alfredo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Chicken Nuggies.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Chicken Sandwich.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Chicken Tacos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Chicken Tendies.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Chicken Wings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Golden Fried Chicken.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Hearty Chicken Noodle Soup.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\IPad_10.2‑inch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Jasper Crisp Pils.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Merlot + Syrah - Cherries &amp;  Rainbows.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Not-a-Big Mac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Patron Cadillac Margarita.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Ribeye + Truffle Butter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+
+    <Resource Include="img\salad.png" />
+    <Resource Include="img\search_icon.png" />
+    <Resource Include="img\shopping-cart.png" />
+    <Resource Include="img\Spinach Stuffed Chicken Breast.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Straw.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MenuPageSaladSample.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MenuPageBeerSample.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReviewPageS1.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MenuPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

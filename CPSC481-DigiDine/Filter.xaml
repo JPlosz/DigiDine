@@ -1,0 +1,67 @@
+<UserControl x:Class="CPSC481_DigiDine.Filter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CPSC481_DigiDine"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="477.5"
+             d:Background="White">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+            <Button HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="85" Height="35" Click="Button_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img/shopping-cart.png" Height="25"/>
+                    <Label x:Name="subtotalLabel" HorizontalAlignment="Left" Content="{Binding Path=Subtotal}" VerticalAlignment="Top" Foreground="{StaticResource backgroundColor}"/>
+                </StackPanel>
+            </Button>
+            <Button Content="Call Server" HorizontalAlignment="Left" Margin="220,0,0,0" VerticalAlignment="Top" Height="35" Width="150" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Height="100">
+            <TextBox x:Name="textBox"  TextWrapping="Wrap" Padding="5" Margin="28,30,0,0" FontSize="16" Width="360" Height="30" VerticalAlignment="Center"/>
+            <Button x:Name="button" Content="FIND" HorizontalAlignment="Left" Margin="0,30,0,0" Height="35" Width="54" FontSize="16" Click="SearchBar"/>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBlock TextWrapping="Wrap" Text="Filters" FontSize="20" FontFamily="Segoe UI Black" Width="418"/>
+            <CheckBox Content="price range" Margin="28,30,10,0"  FontSize="16" x:Name="PriceRange" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+            <Slider x:Name="slider" Margin="45,20,74,0" TickPlacement="BottomRight" IsSnapToTickEnabled="True" IsTabStop="False" Maximum="100" TickFrequency="5" ValueChanged="Slider_ValueChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="$0" Margin="45,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$10" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$20" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$30" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$40" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$50" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$60" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$70" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$80" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$90" Margin="15,10,0,0" />
+                <TextBlock TextWrapping="Wrap" Text="$100" Margin="15,10,0,0" />
+            </StackPanel>
+
+            <TextBlock TextWrapping="Wrap" Text="Dietary Restrictions" Margin="28,40,0,0" FontSize="16" FontWeight="Bold" Width="448" FontStyle="Italic"/>
+            <Grid Height="300" Margin="28, 30, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <CheckBox Grid.Column="0" Grid.Row="0" Content="No Peanuts"  FontSize="14"  x:Name="Peanuts" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="1" Grid.Row="0" Content="No Pork"  FontSize="14"  x:Name="Pork" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="2" Grid.Row="0" Content="No Chicken"  FontSize="14"  x:Name="Chicken" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="0" Grid.Row="1" Content="Gluten Sensitive"  FontSize="14" x:Name="Gluten" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="1" Grid.Row="1" Content="Vegan"  FontSize="14"  x:Name="Vegan" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="2" Grid.Row="1" Content="No Beef"  FontSize="14"  x:Name="Beef" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="0" Grid.Row="2" Content="Dairy Sensitive"  FontSize="14" x:Name="Dairy" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Grid.Column="1" Grid.Row="2" Content="Vegetarian"  FontSize="14"  x:Name="Vegetarian" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+            </Grid>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,123 @@
+<Window x:Class="CPSC481_DigiDine.SearchPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CPSC481_DigiDine"
+        mc:Ignorable="d"
+        Title="SearchPage" Height="800" Width="1149"
+        ResizeMode="NoResize" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    
+    <Grid>
+        <Image x:Name="iPad_Border" Height="800" Width="1149" Stretch="None" Source="/img/IPad_10.2‑inch.png"/>
+        <Grid Height="720" Width="955" Background="White">
+            <!-- Defines two columns for split screen -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!-- Build the left column of menu page -->
+            <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+                <Label x:Name="CurrentCategory" Content="CUSTOM" HorizontalAlignment="Center" Margin="0,-5,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="{DynamicResource textColor}" />
+                <Button x:Name="RightViewButton" FontFamily="Marlett" FontSize="14" Content="4" Margin="450,41,2,635" Height="26" Visibility="Hidden"/>
+                <Button x:Name="LeftViewButton" FontFamily="Marlett" FontSize="14" Content="3" Margin="5,41,0,634" HorizontalAlignment="Left" Width="24" Click="LeftViewButton_Click" />
+                <Grid x:Name="CategoryButtonGrid" HorizontalAlignment="Center" Height="26" Margin="0,41,0,0" Width="423" Grid.Row="4" Grid.Column="4" VerticalAlignment="Top" UseLayoutRounding="False">
+                    <ScrollViewer x:Name="Specials_Category" VerticalScrollBarVisibility="Disabled" CanContentScroll="True">
+                        <StackPanel x:Name="CategoryPanel" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Visible" CanHorizontallyScroll="True" Width="428" Margin="-4,0,0,0" Height="25">
+                            <Button x:Name="CategoryButton0" Content="APPETIZERS" FontSize="18" FontWeight="Bold" FontFamily="Tempus Sans ITC" Margin="10,0,10,0" Background="#FF274C77" Foreground="#FFE7ECEF"/>
+                            <Button x:Name="CategoryButton1" Content="MAINS" FontSize="18" FontWeight="Bold" Margin="10,0,10,0" FontFamily="Tempus Sans ITC" Background="#FF274C77" Foreground="#FFE7ECEF"/>
+                            <Button x:Name="CategoryButton2" Content="DRINKS" FontSize="18" FontWeight="Bold" Margin="10,0,10,0" FontFamily="Tempus Sans ITC" Background="#FF274C77" Foreground="#FFE7ECEF"/>
+                            <Button x:Name="CategoryButton3" Content="SPECIALS" Margin="10,0,10,0" FontSize="18" FontWeight="Bold" FontFamily="Tempus Sans ITC" Background="#FFA3CEF1" Foreground="#FFE7ECEF"/>
+                            <Button x:Name="CategoryButton4" Content="COMPLIMENTARY" FontSize="18" FontWeight="Bold" FontFamily="Tempus Sans ITC" Background="#FF274C77" Margin="10,0,10,0" Foreground="#FFE7ECEF"/>
+                            <Button x:Name="CategoryButton5" Content="CUSTOM" FontSize="18" FontWeight="Bold" FontFamily="Tempus Sans ITC" Margin="10,0,10,0" Background="#FF274C77" Foreground="#FFE7ECEF" Style="{StaticResource SelectedButton}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <ScrollViewer x:Name="Chicken_Custom" Margin="-27,31,-26,-641" >
+                        <StackPanel CanVerticallyScroll="True">
+                            <Label Content="APPETIZERS" Background="{DynamicResource altTextColor}" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7"  Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Hearty Chicken Noodle Soup.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill"/>
+                                    <Label Content="Hearty Chicken Noodle Soup" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 9.25" Margin="382,18,20,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.534,1.244"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Chicken Tacos.png" VerticalAlignment="Center" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill"/>
+                                    <Label Content="World Famous Chicken Tacos" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+                                    <Label Content="$ 11.75" Margin="382,18,20,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1"/>
+                                </Grid>
+                            </Button>
+                            <Label Content="Mains" Background="{DynamicResource altTextColor}" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Chicken Tendies.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True"/>
+                                    <Label Content="Chicken Tendies" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 15.60" Margin="382,18,20,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Chicken Wings.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill"/>
+                                    <Label Content="Chicken Wings" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 12.50" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Chicken Alfredo.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                                    <Label Content="Creamy Chicken Alfredo " Margin="74,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 18.79" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Chicken Sandwich.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                                    <Label Content="Grilled Chicken Sandwich" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 16.59" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Golden Fried Chicken.png" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                                    <Label Content="Golden Fried Chicken" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 18.99" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Chicken Nuggies.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                                    <Label Content="Homestyle Chicken Nuggies" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 12.99" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Southwest Caesar Chicken Wrap.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                                    <Label Content="Southwest Caesar Chicken Wrap" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 14.89" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                            <Button Height="75" BorderBrush="#FFA29090" BorderThickness="1,1,1,1" Width="455" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="1" Background="White" Foreground="#FF8C3131" OpacityMask="#FFD2A7A7" Margin="2">
+                                <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="75" Width="461">
+                                    <Image HorizontalAlignment="Left" Height="75" Width="75" Source="/img/Spinach Stuffed Chicken Breast.jpg" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" Stretch="UniformToFill" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+                                    <Label Content="Spinach-Stuffed Roasted Chicken Breast" Margin="75,18,72,17" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    <Label Content="$ 19.49" Margin="382,18,20,17" FontSize="14" Cursor="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+
+            <!-- Build the right column of menu page -->
+            <Grid Grid.Column="1">
+                <Border BorderThickness="4,0,0,0" BorderBrush="{StaticResource buttonColor}" />
+                
+            </Grid>
+        </Grid>
+        <Separator Margin="575,-36,97,40"/>
+    </Grid>
+</Window>

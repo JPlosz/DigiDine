@@ -1,0 +1,42 @@
+﻿<Window x:Class="CPSC481_DigiDine.ReviewPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CPSC481_DigiDine"
+             mc:Ignorable="d" 
+             Height="720" Width="955"
+             ResizeMode="NoResize" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Grid Height="720" Width="955" Background="{DynamicResource backgroundColor}">
+        <Button Content="Return to Menu" HorizontalAlignment="Left" Margin="35,26,0,0" VerticalAlignment="Top" Height="53" Width="193" Click="returnToMenu" FontSize="20" FontWeight="Bold" FontFamily="Global User Interface"/>
+        <Button Content="Call Server" HorizontalAlignment="Left" Margin="789,26,0,0" VerticalAlignment="Top" Height="53" Width="138" Click="callServer" FontSize="20" FontWeight="Bold" FontFamily="Global User Interface"/>
+        <Border BorderBrush="{StaticResource buttonColor}" BorderThickness="5" Margin="34,143,29,105" CornerRadius="8" Background="#FFE7ECEF" >
+            <!-- Unordered Section -->
+            <ScrollViewer Background="white"  HorizontalAlignment="Left" Height="151" Margin="5,33,0,0" VerticalAlignment="Top" Width="872" FontSize="20" Foreground="#FF8B8C89" BorderBrush="{x:Null}"  ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                <StackPanel x:Name="UnorderedListView"/>
+            </ScrollViewer>
+        </Border>
+        <Label x:Name="unordered_subtotal" HorizontalAlignment="Left" Height="24" Margin="48,342,0,0" Content="SUBTOTAL:" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface" FontSize="14" BorderThickness="0" Background="{x:Null}" Foreground="{StaticResource buttonColor}"/>
+        <Label x:Name="unordered_subtotal_amount" HorizontalAlignment="Left" Height="24" Margin="127,342,0,0" Content="{Binding Path=unorderedTotal}" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface" FontSize="14"  BorderThickness="0" Foreground="{StaticResource buttonColor}"/>
+        <Label HorizontalAlignment="Left" Height="49" Margin="35,94,0,0" Content="Review Order" VerticalAlignment="Top" Width="257" FontFamily="Global User Interface" FontSize="36" FontWeight="Bold" BorderThickness="0" Background="{x:Null}" Foreground="{StaticResource buttonColor}"/>
+        <Label HorizontalAlignment="Left" Height="29" Margin="48,152,0,0" Content="UNORDERED" VerticalAlignment="Top" Width="135" FontFamily="Global User Interface" FontSize="20" FontWeight="Bold" BorderThickness="0" Background="{x:Null}" Foreground="{StaticResource buttonColor}"/>
+        <!-- Total Section - Static Labels -->
+        <Label HorizontalAlignment="Left" Margin="706,623,0,0" Content="SUBTOTAL:" VerticalAlignment="Top" Width="112" FontFamily="Global User Interface" FontSize="16" BorderThickness="0" Background="{x:Null}" Foreground="{DynamicResource  textColor}" FontWeight="Bold"/>
+        <Label HorizontalAlignment="Left" Margin="706,650,0,0" Content="TAX (5%):" VerticalAlignment="Top" Width="113" FontFamily="Global User Interface" FontSize="16" BorderThickness="0" Background="{x:Null}" Foreground="{DynamicResource  textColor}" FontWeight="Bold" RenderTransformOrigin="-4.699,0.692"/>
+        <Label HorizontalAlignment="Left" Margin="706,675,0,0" Content="TOTAL:" VerticalAlignment="Top"  FontFamily="Global User Interface" FontSize="22" BorderThickness="0" Background="{x:Null}" Foreground="{DynamicResource  textColor}" FontWeight="Bold"/>
+        <!-- Total Section - Dyanmic -->
+        <Separator HorizontalAlignment="Left" Height="4" Margin="40,389,0,0" VerticalAlignment="Top" Width="879"/>
+        <Label x:Name="subtotalLabel" HorizontalAlignment="Left" Margin="819,623,0,0" Content="{Binding Path=subtotal}" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="16" Foreground="{DynamicResource  textColor}" Width="108" Height="26"/>
+        <Label x:Name="taxLabel" HorizontalAlignment="Left" Margin="819,650,0,0" Content="{Binding Path=getTax}"  VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="16" Foreground="{DynamicResource  textColor}" Width="108" Height="29"/>
+        <Label x:Name="totalLabel" HorizontalAlignment="Left" Margin="818,675,0,0"  Content="{Binding Path=total}" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource  textColor}" RenderTransformOrigin="0.5,0.519" Height="36" Width="108"/>
+        <Label HorizontalAlignment="Left" Height="30" Margin="48,410,0,0" Content="ORDERED" VerticalAlignment="Top" Width="109" FontFamily="Global User Interface" FontSize="20" FontWeight="Bold" BorderThickness="0" Background="{x:Null}" Foreground="{StaticResource buttonColor}"/>
+        <!-- Ordered Section -->
+        <ScrollViewer Background="white" HorizontalAlignment="Left" Height="120" Margin="44,440,0,0" VerticalAlignment="Top" Width="872" FontSize="20" Foreground="#FF8B8C89" BorderBrush="{x:Null}"  ScrollViewer.VerticalScrollBarVisibility="Visible" >
+            <StackPanel x:Name="OrderedListView"/>
+        </ScrollViewer>
+        <Label x:Name="ordered_subtotal" HorizontalAlignment="Left" Height="24" Margin="48,570,0,0" Content="SUBTOTAL:" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface" FontSize="14" BorderThickness="0" Background="{x:Null}" Foreground="#FF274C77"/>
+        <Label x:Name="ordered_subtotal_amount" HorizontalAlignment="Left" Height="24" Margin="127,570,0,0" Content="{Binding Path=orderedTotal}" VerticalAlignment="Top" Width="90" FontFamily="Global User Interface" FontSize="14"  BorderThickness="0" Foreground="#FF274C77"/>
+        <Button Content="Submit Order" HorizontalAlignment="Left" Margin="750,340,0,0" VerticalAlignment="Top" Height="36" Width="152" Click="submitOrder" FontSize="16" FontWeight="Bold" FontFamily="Global User Interface"/>
+        <Button Content="How To Pay" HorizontalAlignment="Left" Height="53" Margin="611,26,0,0" VerticalAlignment="Top" Width="149" Click="howToPay" FontSize="20" FontWeight="Bold" />
+    </Grid>
+</Window>

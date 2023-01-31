@@ -1,0 +1,13 @@
+﻿<Window x:Class="CPSC481_DigiDine.AddToOrderPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CPSC481_DigiDine"
+        mc:Ignorable="d"
+        Title="AddToOrderPopUp" Height="200" Width="400"
+        Background="{StaticResource backgroundColor}">
+    <Grid>
+        <Label Content="Item Added To Order" Foreground="{StaticResource textColor}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

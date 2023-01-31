@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CPSC481-DigiDine/1.0.0": {
+        "runtime": {
+          "CPSC481-DigiDine.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CPSC481-DigiDine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
